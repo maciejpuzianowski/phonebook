@@ -2,9 +2,9 @@
 Simple Phonebook API with ability to get, sort, add and delete records.
 ## Phone number object
 Phone number object consists of three strings that are respectively:
-- Firstname {firstName}
-- Lastname {lastName}
-- Phone number {phoneNumber}
+- Firstname {firstname}
+- Lastname {lastname}
+- Phone number {phonenumber}
 ## Endpoints
 #### Get records (GET)
 ```
@@ -12,7 +12,7 @@ Phone number object consists of three strings that are respectively:
 ```
 #### Get sorted records (GET)
 ```
-/records?sortBy={fieldName}&orderBy={asc || desc}
+/records?sortBy={fieldname}&orderBy={asc || desc}
 ```
 #### Add record (POST)
 Provide request body.

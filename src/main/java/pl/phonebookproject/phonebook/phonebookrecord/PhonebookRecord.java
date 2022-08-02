@@ -1,12 +1,14 @@
 package pl.phonebookproject.phonebook.phonebookrecord;
 
+import lombok.Data;
+
 import javax.persistence.Id;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
 @Entity
-public class PhonebookRecord {
+public @Data class PhonebookRecord {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,29 +23,7 @@ public class PhonebookRecord {
         phonenumber = phoneNumber;
     }
 
-    public PhonebookRecord(){}
+    public PhonebookRecord(){
 
-    public String getFirstName() {
-        return firstname;
-    }
-
-    public void setFirstName(String firstname) {
-        this.firstname = firstname;
-    }
-
-    public String getLastName() {
-        return lastname;
-    }
-
-    public void setLastName(String lastname) {
-        this.lastname = lastname;
-    }
-
-    public String getPhoneNumber() {
-        return phonenumber;
-    }
-
-    public void setPhoneNumber(String phonenumber) {
-        this.phonenumber = phonenumber;
     }
 }

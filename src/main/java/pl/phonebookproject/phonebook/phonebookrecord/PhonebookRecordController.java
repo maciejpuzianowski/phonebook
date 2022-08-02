@@ -14,7 +14,7 @@ public class PhonebookRecordController {
     @Autowired
     public PhonebookRecordController(PhonebookRecordRepository repository){
         PhonebookRecords = repository;
-        PhonebookRecords.save(new PhonebookRecord("Maciej", "Puzianowski", "503945623"));
+        PhonebookRecords.save(new PhonebookRecord("Maciej", "Puzianowski", "232664323"));
         PhonebookRecords.save(new PhonebookRecord("Adrian", "Nowak", "125363235"));
         PhonebookRecords.save(new PhonebookRecord("Kacper", "Polański", "755855455"));
         PhonebookRecords.save(new PhonebookRecord("Anna", "Mucha", "997500454"));
@@ -34,7 +34,7 @@ public class PhonebookRecordController {
 
     @PostMapping("/addrecord")
     public String addRecord(@RequestBody PhonebookRecord record){
-        return "Added phone number: " + PhonebookRecords.save(record).getPhoneNumber();
+        return "Added phone number: " + PhonebookRecords.save(record).getPhonenumber();
     }
 
     @DeleteMapping("/deleterecord")
