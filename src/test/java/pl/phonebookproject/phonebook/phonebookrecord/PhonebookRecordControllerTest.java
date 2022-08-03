@@ -24,7 +24,7 @@ class PhonebookRecordControllerTest {
         PhonebookRecord record = new PhonebookRecord("Maciej", "Puzianowski","123453235");
         repository.save(record);
         assertNotNull(repository.getReferenceById(1L));
-        repository.delete(record);
-        assertEquals(0,repository.count());
+        repository.deleteById(1L);
+        assertFalse(repository.existsById(1L));
     }
 }
