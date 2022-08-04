@@ -8,18 +8,18 @@ Phone number object consists of three strings that are respectively:
 ## Endpoints
 #### Get records (GET)
 ```
-/records
+/record
 ```
 #### Get sorted records (GET)
 ```
-/records?sortBy={fieldname}&orderBy={asc || desc}
+/record?sortBy={fieldname}&orderBy={asc || desc}
 ```
 #### Add record (POST)
 Provide request body.
 ```
-/addrecord
+/record/add
 ```
 #### Delete records (DELETE)
 ```
-/deleterecord?phoneNumber={number}
+/record/delete?phoneNumber={number}
 ```

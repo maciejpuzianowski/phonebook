@@ -1,14 +1,15 @@
-package pl.phonebookproject.phonebook.phonebookrecord;
+package pl.phonebookproject.phonebook.record;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
+import pl.phonebookproject.phonebook.models.Record;
 
 import java.util.List;
 
 
 @Repository
-public interface PhonebookRecordRepository extends JpaRepository<PhonebookRecord, Long> {
+public interface RecordRepository extends JpaRepository<Record, Long> {
     @Transactional
-    List<PhonebookRecord> deleteByPhonenumber(String phonenumber);
+    List<Record> deleteByPhonenumber(String phonenumber);
 }
